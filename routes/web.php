@@ -10,6 +10,7 @@ Route::get('/', 'Inicio\InicioController@index')->name('asistenciahoy');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 /*Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');*/
+Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
 
 Route::get('/inversionista/login', function () {

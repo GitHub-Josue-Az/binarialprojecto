@@ -48,4 +48,14 @@ class InicioController extends Controller
     }*/
 
 
+ public function pruebita3()
+    {
+
+       $jeje = Usuario::all();
+
+
+        return $jeje;
+    }
+
+
 }

@@ -5,20 +5,20 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema dbwt66nas56xsx
+-- Schema binarial
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema dbwt66nas56xsx
+-- Schema binarial
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `dbwt66nas56xsx` DEFAULT CHARACTER SET utf8 ;
-USE `dbwt66nas56xsx` ;
+CREATE SCHEMA IF NOT EXISTS `binarial` DEFAULT CHARACTER SET utf8 ;
+USE `binarial` ;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`roles`
+-- Table `binarial`.`roles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`roles` (
+CREATE TABLE IF NOT EXISTS `binarial`.`roles` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
@@ -26,9 +26,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`usuarios`
+-- Table `binarial`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`usuarios` (
+CREATE TABLE IF NOT EXISTS `binarial`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(145) NULL,
   `usuario` VARCHAR(145) NOT NULL,
@@ -42,16 +42,16 @@ CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`usuarios` (
   INDEX `fk_user_roles_idx` (`roles_id` ASC) ,
   CONSTRAINT `fk_user_roles`
     FOREIGN KEY (`roles_id`)
-    REFERENCES `dbwt66nas56xsx`.`roles` (`id`)
+    REFERENCES `binarial`.`roles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`tipos`
+-- Table `binarial`.`tipos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`tipos` (
+CREATE TABLE IF NOT EXISTS `binarial`.`tipos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(145) NOT NULL,
   PRIMARY KEY (`id`))
@@ -59,9 +59,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`rasons`
+-- Table `binarial`.`rasons`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`rasons` (
+CREATE TABLE IF NOT EXISTS `binarial`.`rasons` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(245) NOT NULL,
   PRIMARY KEY (`id`))
@@ -69,9 +69,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`representantes`
+-- Table `binarial`.`representantes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`representantes` (
+CREATE TABLE IF NOT EXISTS `binarial`.`representantes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(245) NOT NULL,
   PRIMARY KEY (`id`))
@@ -79,9 +79,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`empresas`
+-- Table `binarial`.`empresas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`empresas` (
+CREATE TABLE IF NOT EXISTS `binarial`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `ruc` VARCHAR(145) NULL,
   `nombrecomer` VARCHAR(145) NULL,
@@ -106,26 +106,26 @@ CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`empresas` (
   INDEX `fk_empresas_usuarios1_idx` (`usuarios_id` ASC) ,
   CONSTRAINT `fk_empresas_rasons1`
     FOREIGN KEY (`rasons_id`)
-    REFERENCES `dbwt66nas56xsx`.`rasons` (`id`)
+    REFERENCES `binarial`.`rasons` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_empresas_representantes1`
     FOREIGN KEY (`representantes_id`)
-    REFERENCES `dbwt66nas56xsx`.`representantes` (`id`)
+    REFERENCES `binarial`.`representantes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_empresas_usuarios1`
     FOREIGN KEY (`usuarios_id`)
-    REFERENCES `dbwt66nas56xsx`.`usuarios` (`id`)
+    REFERENCES `binarial`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`proyectos`
+-- Table `binarial`.`proyectos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`proyectos` (
+CREATE TABLE IF NOT EXISTS `binarial`.`proyectos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `codigo` VARCHAR(145) NOT NULL,
   `nombreproyect` VARCHAR(145) NOT NULL,
@@ -163,21 +163,21 @@ CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`proyectos` (
   INDEX `fk_proyectos_empresas1_idx` (`empresas_id` ASC) ,
   CONSTRAINT `fk_proyectos_tipos1`
     FOREIGN KEY (`tipos_id`)
-    REFERENCES `dbwt66nas56xsx`.`tipos` (`id`)
+    REFERENCES `binarial`.`tipos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_proyectos_empresas1`
     FOREIGN KEY (`empresas_id`)
-    REFERENCES `dbwt66nas56xsx`.`empresas` (`id`)
+    REFERENCES `binarial`.`empresas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `dbwt66nas56xsx`.`archivos`
+-- Table `binarial`.`archivos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`archivos` (
+CREATE TABLE IF NOT EXISTS `binarial`.`archivos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `tasacion` VARCHAR(255) NOT NULL,
   `usuarios_id` INT NOT NULL,
@@ -193,12 +193,12 @@ CREATE TABLE IF NOT EXISTS `dbwt66nas56xsx`.`archivos` (
   INDEX `fk_archivos_proyectos1_idx` (`proyectos_id` ASC) ,
   CONSTRAINT `fk_archivos_usuarios1`
     FOREIGN KEY (`usuarios_id`)
-    REFERENCES `dbwt66nas56xsx`.`usuarios` (`id`)
+    REFERENCES `binarial`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_archivos_proyectos1`
     FOREIGN KEY (`proyectos_id`)
-    REFERENCES `dbwt66nas56xsx`.`proyectos` (`id`)
+    REFERENCES `binarial`.`proyectos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
