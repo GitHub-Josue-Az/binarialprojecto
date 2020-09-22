@@ -8,10 +8,14 @@ Route::get('/', 'Inicio\InicioController@index')->name('asistenciahoy');
 		
 										/* LOGIN Y REGISTRO */
 Auth::routes();
+	
 Route::get('/home', 'HomeController@index')->name('home');
 /*Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');*/
 Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
+
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::get('/inversionista/login', function () {
     return view('auth/inversionista/login');
@@ -51,5 +55,5 @@ Route::group(['prefix' => 'empresa', 'as' => 'empresa.', 'middleware' => ['empre
 
 	Route::get('/proyectos/{id}/image', 'Empresa\EmpresaController@image')->name('proyecto.image');	
 
-});
+}	);
 

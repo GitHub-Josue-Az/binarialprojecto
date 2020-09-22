@@ -132,6 +132,7 @@
                                                             <i class="bx bxl-facebook-square font-medium-3"></i><span class="pl-50 d-block text-center">Facebook</span></a>
                                                     </div>
                                                 </form>
+                                                
 
 <br>                                                <div class="text-center"><small class="mr-25">¿Aún no tienes cuenta?</small><a href=""><small>Registrarse</small></a></div>
                                             </div>
