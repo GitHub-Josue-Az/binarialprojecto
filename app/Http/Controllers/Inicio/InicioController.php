@@ -33,7 +33,7 @@ class InicioController extends Controller
 
 
 
-    /*public function pruebita2()
+    public function pruebita2()
     {
 
         $i=1;
@@ -45,7 +45,7 @@ class InicioController extends Controller
 
 
         return $jeje;
-    }*/
+    }
 
 
  public function pruebita3()
