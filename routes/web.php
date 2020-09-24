@@ -13,6 +13,16 @@ Route::get('home', 'HomeController@index')->name('home');
 Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');
 Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
+
+ //LOGIN
+Route::get('login','Auth\LoginController@showLoginForm');
+
+Route::post('/login',['as'=> 'login', 'uses' => 'Auth\LoginController@login']);
+
+
+//LOGOUT
+Route::get('logout','Auth\LoginController@logout');
+
  
 Auth::routes();
  
