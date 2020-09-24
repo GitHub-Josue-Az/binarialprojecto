@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!-- BEGIN: Head-->
 
 <head>
-     <meta charset="utf-8" >
+      <meta charset="utf-8" >
     <meta http-equiv="Content-Type" content="aplication/json">
     <!-- CSRF Token -->
-     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -51,18 +51,69 @@
 
 
 
-<body >
+<body class="vertical-layout vertical-menu-modern 1-column  navbar-sticky footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
     <!--Navbar -->
 
-
-                                                <form  method="POST" action="/login">
+  <!--/.Navbar -->
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            
+            <div class="content-header row">
+                
+            </div>
+            <div class="content-body">
+                <!-- login page start -->
+             
+                <section id="auth-login" class="row flexbox-container">
+                    <div class="col-xl-10 col-12">
+                        <div class="card bg-authentication mb-0">
+                            <nav class=" navbar navbar-expand-lg navbar-dark info-color">
+                                <a class="navbar-brand" href="#"><img width="200" src="<?php echo url('/'); ?>/Frontend/images/logo/logo.png" alt="">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                                  aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                                  <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item ">
+                                      <a class="nav-link" href="#">
+                                        <i class="fa fa-envelope pr-1"></i>binarial@gmail.com
+                                        <span class="sr-only">(current)</span>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">
+                                        <i class="fa fa-phone pr-1"></i>+519994538755</a>
+                                    </li>
+                                  
+                                  </ul>
+                                </div>
+                              </nav>
+                            <div class="row m-0">
+                                <!-- left section-login -->
+                                
+                                <div class="col-md-6 col-12 px-0">
+                                    <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
+                                        <div class="card-header pb-1">
+                                            <div class="card-title">
+                                                <h4 class="text-center mb-2">Ingresar</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                
+                                                
+                                                <form action="index.html" method="post" action="/login">
                                                     {!! csrf_field() !!}
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
-                                                        <input class="form-control" placeholder="correo" id="usuario" name="usuario" type="email">
+                                                        <input class="form-control" placeholder="correo" id="usuario" name="usuario" type="text">
                                                     <div class="form-group">
                                                         <label class="text-bold-600" for="password">Contraseña</label>
-                                                       <input class="form-control" id="password" name="password" placeholder="Password" type="password">placeholder="Ingresa tu contraseña">
+                                                     <input class="form-control" id="password" name="password" placeholder="Password" type="password">
                                                     </div>
                                                     <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
                                                         <div class="text-left">
@@ -86,6 +137,34 @@
                                                     </div>
                                                 </form>
 
+<br>                                                <div class="text-center"><small class="mr-25">¿Aún no tienes cuenta?</small><a href=""><small>Registrarse</small></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- right section image -->
+                                <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
+                                    <div class="card-content">
+                                        <h3>Bienvenido al Sistema Binarial</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nihil voluptatibus fuga asperiores, autem impedit ipsum cum delectus temporibus nesciunt laboriosam architecto.</p>
+                                        <img class="img-fluid" src="<?php echo url('/'); ?>/Backend/images/pages/login.png" alt="branding logo">
+                                    </div>
+                                </div>
+                                    
+                                
+                            </div>
+                       
+                        </div>
+                    </div>
+                </section>
+                <!-- login page ends -->
+
+
+
+                
+            </div>
+        </div>
+    </div>
     <!-- END: Content-->
 
 
