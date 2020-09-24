@@ -106,7 +106,7 @@
                                             <div class="card-body">
                                                 
                                                 
-                                                <form action="index.html" method="post" action="/login">
+                                                <form  method="post" action="/login">
                                                     {!! csrf_field() !!}
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
