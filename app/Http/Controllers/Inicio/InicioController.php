@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class InicioController extends Controller
 {
@@ -56,6 +59,12 @@ class InicioController extends Controller
 
         return $jeje;
     }
+
+    public function logii(Request $request)
+{
+
+    return 1;
+}
 
 
 }

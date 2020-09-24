@@ -12,14 +12,11 @@ class Usuario extends Authenticatable
 {
     use Notifiable;
 
-    
-
-      public $timestamps = false;
 
 
-   /* protected $fillable = [
+    protected $fillable = [
         'nombre', 'usuario', 'password', 'roles_id', 'created_at', 'updated_at', 'deleted', 
-    ];*/
+    ];
 
 
     protected $hidden = [
@@ -50,9 +47,9 @@ class Usuario extends Authenticatable
     }
 
     
-    public function getIsAdminAttribute() {
+    /*public function getIsAdminAttribute() {
         return $this->role->id === 3;
-    }
+    }*/
 
     public function getIsEmpresaAttribute() {
         return $this->role->id === 1;
@@ -62,7 +59,7 @@ class Usuario extends Authenticatable
         return $this->role->id === 2;
     }
         
-     public function getStatusTagAttribute() {
+    /* public function getStatusTagAttribute() {
         switch ($this->status){
             case '1': 
                 return '<span class="badge badge-success"> Aceptado </span>';
@@ -73,7 +70,7 @@ class Usuario extends Authenticatable
             default : 
                 return '<span class="badge badge-secondary">Evaluación</span>';
         }
-    }    
+    } */   
 
 
 

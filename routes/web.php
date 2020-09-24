@@ -1,19 +1,21 @@
 <?php
 
+use Illuminate\Http\Request;
 
 							/* MENU INICIO: INVERSIONISTA - EMPRESA   */
 Route::get('/empresa', 'Inicio\InicioController@empresa')->name('empresa');
 Route::get('/inversionista', 'Inicio\InicioController@inversionista')->name('inversionista');
 Route::get('/', 'Inicio\InicioController@index')->name('asistenciahoy');
 		
-										/* LOGIN Y REGISTRO */
-Auth::routes();
-	
+										/* LOGIN Y REGISTRO */	
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');
 Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
-
+ 
+Auth::routes();
+ 
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
@@ -55,5 +57,6 @@ Route::group(['prefix' => 'empresa', 'as' => 'empresa.', 'middleware' => ['empre
 
 	Route::get('/proyectos/{id}/image', 'Empresa\EmpresaController@image')->name('proyecto.image');	
 
-}	);
+}	
+);
 
