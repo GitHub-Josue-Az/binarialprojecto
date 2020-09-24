@@ -102,7 +102,7 @@
                                             <div class="card-body">
                                                 
                                                 
-                                                <form method="POST" action="{{ route('login') }}">
+                                                <form method="POST" action="/login">
                                                      @csrf
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
