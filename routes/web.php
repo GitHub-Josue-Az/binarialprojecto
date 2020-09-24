@@ -15,16 +15,16 @@ Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
 
  //LOGIN
-Route::get('login','Auth\LoginController@showLoginForm');
+Route::get('login','Auth\LoginController@showLoginForm')->name('login');
 
-Route::post('/login',['as'=> 'login', 'uses' => 'Auth\LoginController@login']);
+Route::post('/login','Auth\LoginController@login')->name('logii');
 
 
 //LOGOUT
-Route::get('logout','Auth\LoginController@logout');
+Route::post('logout','Auth\LoginController@logout')->name('logout');
 
  
-Auth::routes();
+/*Auth::routes();*/
  
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
