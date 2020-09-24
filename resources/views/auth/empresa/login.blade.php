@@ -107,7 +107,8 @@
                                                 
                                                 
                                                 <form method="POST" action="/login">
-                                                     @csrf
+                                                     {{-- @csrf --}}
+                                                      {!! csrf_field() !!}
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
                                                         <input class="form-control" placeholder="usuario" id="usuario" name="usuario" type="text"></div>
