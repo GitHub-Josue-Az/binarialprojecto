@@ -1,23 +1,21 @@
-
-
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
 <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Login-BINARIAL</title>
 
-      <meta charset="utf-8" >
-    <meta http-equiv="Content-Type" content="aplication/json">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    
     <link rel="apple-touch-icon" href="<?php echo url('/'); ?>/Backend/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo url('/'); ?>/Backend/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
@@ -108,7 +106,7 @@
                                             <div class="card-body">
                                                 
                                                 
-                                                <form method="POST" action="/login">
+                                                <form method="POST" action="{{ route('login') }}">
                                                      @csrf
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
