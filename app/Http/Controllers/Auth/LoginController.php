@@ -48,15 +48,15 @@ class LoginController extends Controller
     }
 
 
-    /*public function authenticate(Request $request)
+    public function authenticate(Request $request)
     {
         $credentials = $request->only('usuario', 'password');
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('home');
+            return redirect()->route('home');
         }
-    }*/
+    }
     
 
 }

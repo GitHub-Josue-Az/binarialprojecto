@@ -14,20 +14,18 @@ Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');
 Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
 
 
-/* //LOGIN
+ //LOGIN
 Route::get('login','Auth\LoginController@showLoginForm')->name('login');
 
-Route::post('/login','Auth\LoginController@authenticate')->name('logii');
-
+Route::post('login','Auth\LoginController@authenticate')->name('logii');
 
 //LOGOUT
 Route::post('logout','Auth\LoginController@logout')->name('logout');
 
- */
-
-
  
-Auth::routes();
+
+
+ /*Auth::routes();*/
  
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
