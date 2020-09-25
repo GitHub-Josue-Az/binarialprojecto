@@ -37,8 +37,6 @@ class LoginController extends Controller
     public function __construct()
     {
 
-        $ree = 'hi';
-        dd($ree);
         $this->middleware('guest')->except('logout');
     }
 
