@@ -8,8 +8,26 @@ Route::get('/inversionista', 'Inicio\InicioController@inversionista')->name('inv
 Route::get('/', 'Inicio\InicioController@index')->name('asistenciahoy');
 		
 										/* LOGIN Y REGISTRO */	
+
+Route::get('home', 'HomeController@index')->name('home');
 Route::get('pru', 'Inicio\InicioController@pruebita2')->name('pru');
 Route::get('pru2', 'Inicio\InicioController@pruebita3')->name('pru2');
+
+
+/* //LOGIN
+Route::get('login','Auth\LoginController@showLoginForm')->name('login');
+
+Route::post('/login','Auth\LoginController@authenticate')->name('logii');
+
+
+//LOGOUT
+Route::post('logout','Auth\LoginController@logout')->name('logout');
+
+ */
+
+
+ 
+Auth::routes();
  
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
@@ -55,6 +73,3 @@ Route::group(['prefix' => 'empresa', 'as' => 'empresa.', 'middleware' => ['empre
 }	
 );
 
-Auth::routes();
-
-Route::get('home', 'HomeController@index')->name('home');
