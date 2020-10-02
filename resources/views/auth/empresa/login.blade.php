@@ -111,6 +111,7 @@
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
                                                         <input class="form-control" placeholder="correo" id="usuario" name="usuario" type="text">
+                                                    </div>
                                                     <div class="form-group">
                                                         <label class="text-bold-600" for="password">Contraseña</label>
                                                      <input class="form-control" id="password" name="password" placeholder="Password" type="password">
