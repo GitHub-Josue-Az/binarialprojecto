@@ -94,7 +94,7 @@
                               </nav>
                             <div class="row m-0">
                                 <!-- left section-login -->
-                                
+
                                 <div class="col-md-6 col-12 px-0">
                                     <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
                                         <div class="card-header pb-1">
@@ -102,6 +102,17 @@
                                                 <h4 class="text-center mb-2">Ingresar</h4>
                                             </div>
                                         </div>
+                    
+                    @if ($errors->count() > 0)
+                        <div class="alert alert-danger">
+                            <ul class="list-unstyled">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                                         <div class="card-content">
                                             <div class="card-body">
                                                 
@@ -111,10 +122,12 @@
                                                     <div class="form-group mb-50">
                                                         <label class="text-bold-600" for="usuario">Correo</label>
                                                         <input class="form-control" placeholder="correo" id="usuario" name="usuario" type="text">
+                                               {!! $errors->first('usuario','<span class=error>:message</span>') !!}
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="text-bold-600" for="password">Contraseña</label>
                                                      <input class="form-control" id="password" name="password" placeholder="Password" type="password">
+                                                     {!! $errors->first('password','<span class=error>:message</span>') !!}
                                                     </div>
                                                     <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
                                                         <div class="text-left">
@@ -143,6 +156,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                                 <!-- right section image -->
                                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                                     <div class="card-content">

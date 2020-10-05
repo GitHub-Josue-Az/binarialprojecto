@@ -55,7 +55,7 @@ class LoginController extends Controller
             return redirect()->route('home');
         }
 
-        return back();
+        return redirect()->route('logempre')->withErrors('veriricar sus crendeciales');
     }
     
 

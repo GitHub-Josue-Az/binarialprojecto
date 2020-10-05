@@ -36,7 +36,7 @@ Route::get('/inversionista/login', function () {
 
 Route::get('/empresa/login', function () {
     return view('auth/empresa/login');
-});
+})->name('logempre');
 
 Route::get('/admin', function () {
     return view('auth/admin/login');
