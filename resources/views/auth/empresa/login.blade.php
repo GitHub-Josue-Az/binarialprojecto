@@ -91,7 +91,9 @@
                                   
                                   </ul>
                                 </div>
+
                               </nav>
+
                             <div class="row m-0">
                                 <!-- left section-login -->
 
@@ -129,7 +131,7 @@
                                                      <input class="form-control" id="password" name="password" placeholder="Password" type="password">
                                                      {!! $errors->first('password','<span class=error>:message</span>') !!}
                                                     </div>
-                                                    <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+                                                 <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
                                                         <div class="text-left">
                                                             <div class="checkbox checkbox-sm">
                                                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -151,24 +153,27 @@
                                                     </div>
                                                 </form>
 
-<br>                                                <div class="text-center"><small class="mr-25">¿Aún no tienes cuenta?</small><a href=""><small>Registrarse</small></a></div>
+                <br> <div class="text-center"><small class="mr-25">¿Aún no tienes cuenta?</small><a href=""><small>Registrarse</small></a></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <!-- right section image -->
+
+
+                            <!-- right section image -->
                                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                                     <div class="card-content">
-                                        <h3>Bienvenido al Sistema Binarial</h4>
+                                        <h3>Bienvenido al Sistema Binarial</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nihil voluptatibus fuga asperiores, autem impedit ipsum cum delectus temporibus nesciunt laboriosam architecto.</p>
                                         <img class="img-fluid" src="<?php echo url('/'); ?>/Backend/images/pages/login.png" alt="branding logo">
                                     </div>
-                                </div>
-                                    
-                                
+                                </div>                                    
+
+                            </div>  
+
                             </div>
                        
+
                         </div>
                     </div>
                 </section>
