@@ -1,6 +1,27 @@
 <?php
 
+use App\Models\Usuario;
 use Illuminate\Http\Request;
+
+
+/*Route::get('test',function(){
+ 
+ for ($i=0; $i < 20; $i++) { 
+ 	$user= new App\Models\Usuario;
+$user->nombre='jorgepru'.$i;
+$user->usuario='jorgepru'.$i;
+$user->roles_id=2;
+$user->password=bcrypt('jorgepass');
+$user->save(); 
+ }
+  return $user;
+});*/
+
+
+Route::get('carbon', 'Inicio\InicioController@carbonss')->name('carbonss');
+
+Route::get('/poiu', 'Inicio\InicioController@poiu')->name('poiu');
+
 
 							/* MENU INICIO: INVERSIONISTA - EMPRESA   */
 Route::get('/empresa', 'Inicio\InicioController@empresa')->name('empresa');
