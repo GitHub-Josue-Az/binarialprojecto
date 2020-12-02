@@ -104,13 +104,13 @@ class InicioController extends Controller
 
     public function poiu(Request $request){
 
-      $recipients= ['eHw--c_mT0ei_QHKGN4SpI:APA91bEKLUzbhVG8z_LFhpgw4qqThZp4pd4FoxQKwGDGtSIzLY9c5CdSh3zOjHDUTnuw5p7c5e46nfLjeKPVj4nxMYgkJmvKjx8PV4Evi1xfKVX32dmFy0PjqYaLx9agdnBYYDEDABvN'];
+      $recipients= ['dRuNEy3TRXmzylm8pX3HoG:APA91bHmqmnr2teUVR6fmJgCihkTLCUP2ggvAvjFX1Ss8Im60tig2ptLyvOTS2QRexFM3_8mfSjIVZvK-uqd_ch8f21V2MybcJELk2CpFuDwBPfnOANT_mGlg-ENK9sUTY4oc_obtdMy'];
 
       fcm()
-        ->to($recipients) // array
+        ->to($recipients) 
         ->notification([
-            'title' => 'asda',
-            'body' => 'asdadada',
+            'title' => 'Bina',
+            'body' => 'Bina',
         ])
         ->send();
 
