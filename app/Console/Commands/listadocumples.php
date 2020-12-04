@@ -43,7 +43,7 @@ class listadocumples extends Command
         if ($number == 1) {
             
             fcm()
-                ->to($recipients) 
+                ->to(['fxwGGqMqRIKXF4EtiHIcTf:APA91bHYQbCgsgzDEiUc07aVw3GllGHvkyKcSivUKUSOF_bboPgd9I1MIz67zRJUQf4BiFTsMbSgCuCDhyeYYvX7KxRs2txb8gXReHCHWZwJbmtqkcUd7vr1NyPwgANsIef1rR-yyTrs']) 
                 ->notification([
                     'title' => 'Cumpleaños para mañana 🎊🎊🎊',
                     'body' =>  'ones',
@@ -52,7 +52,7 @@ class listadocumples extends Command
             return;
         }
          fcm()
-                ->to($recipients) 
+                 ->to(['fxwGGqMqRIKXF4EtiHIcTf:APA91bHYQbCgsgzDEiUc07aVw3GllGHvkyKcSivUKUSOF_bboPgd9I1MIz67zRJUQf4BiFTsMbSgCuCDhyeYYvX7KxRs2txb8gXReHCHWZwJbmtqkcUd7vr1NyPwgANsIef1rR-yyTrs']) 
                 ->notification([
                     'title' => 'Cumpleaños para mañana 🎊🎊🎊',
                     'body' =>  'two',
