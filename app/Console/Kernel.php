@@ -26,7 +26,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-        $schedule->command('user:cumples')->everyMinute();
+        $schedule->command('user:cumples')->timezone('America/Lima')
+         ->at('20:16');
     }
 
     /**
