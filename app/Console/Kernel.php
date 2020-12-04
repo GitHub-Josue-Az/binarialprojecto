@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        listadocumples::class
     ];
 
     /**
@@ -25,14 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-       /* $cumples = Carbon::now();
-
-        Usuario::where()
-       
-        $schedule->call(function(){
-            logger("Hola mundo");
-        })->everyMinute();*/
-
+        $schedule->command('user:cumples')->everyMinute();
     }
 
     /**
